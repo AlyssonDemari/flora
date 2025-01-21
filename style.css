@@ -1,0 +1,562 @@
+/* Estilo para o display grid quadrado */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+    :root{
+        --Red: hsl(14, 86%, 42%);
+        --Green: hsl(159, 69%, 38%);
+
+        --white: hsl(20, 50%, 98%);
+        --light-grey: hsl(13, 31%, 94%);
+        --bege: hsl(14, 25%, 72%);
+        --bege1: hsl(7, 20%, 60%);
+        --bege2: hsl(12, 20%, 44%);
+        --brown: hsl(14, 65%, 9%);
+        --font: "Red Hat Text", serif;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: var(--font); 
+        font-size: 1em;
+    }
+
+    body{
+        display: flex;
+        background-color: var(--light-grey);
+        margin: 5%;
+    }
+
+    main {
+        flex: 0 0 70%;
+;
+    }
+
+    aside{
+        flex: 0 0 20%;
+        margin: 0px 0px 0px 30px;
+        height: 100%;
+        min-height: 300px;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+
+    /*! Estilização dos cards */
+
+    main h1{
+        font-size: 2.2rem;
+        color: var(--brown);
+        margin-bottom: 15px;
+    }
+
+    .container-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        min-height: 200px;
+        line-height: 150%;
+    }
+
+    .card h2{
+        color: var(--brown);
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    .card p{
+        color: var(--bege2);
+    }
+
+    .card span{
+        color: var(--Red);
+        font-weight: 600;
+    }
+
+    .card  img{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .txt-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 5px;
+        margin-top: 13%;
+    }
+
+    .img-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .img-card button{
+        width: 150px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        font-weight: 600;
+        color: var(--brown);
+    }
+
+    .img-card button{
+        border: 1px solid var(--Red);
+        padding: 10px 15px;
+        border-radius: 20px;
+    }
+
+    .img-card button i{
+        color: var(--Red);
+    }
+
+    button:active{
+        background-color: var(--Red);
+        transition: 0.1s;
+    }
+    .escolher{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    } 
+    
+    .escolher p{
+        color: var(--white);
+    }
+
+    .media{
+        border: 1px solid white;
+        color:var(--white);
+        align-items: center;
+        padding: 2px;
+        border-radius: 50%;
+    }
+
+    .cake{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+ 
+
+    /*! estilização cart vazio
+
+    
+    /*! estilização item selecionados */
+
+    .cart{
+        background-color: var(--white);
+        width: 90%;
+        min-height: 25%;
+        max-width: 300px;
+        border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    
+    .cart h1{
+        align-self: self-start;
+        color: var(--Red);
+        font-size: 1.2rem;
+    }
+
+    .cart p{
+        color: var(--bege2);
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--bege2);
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        user-select: none;
+    }
+
+    .item img{
+        margin: 0px 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    .item i{
+        padding: 20px 8px;
+    }
+
+    .valor-total{
+        display: none;
+    }
+
+    .tot-button{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copy-cart{
+        background-color: var(--white);
+        border: 1px solid var(--Red);
+        font-weight: 600;
+        padding: 5px 5px;
+        border-radius: 20px;
+        display: none;
+    }
+
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--light-grey);
+            margin: 0%;
+        }
+    
+        main {
+            margin: 30px 10px;
+        }
+    
+        aside {
+            background-color: var(--rose0);
+            margin: 30px 10px 60px 10px
+        }
+    
+    
+        /*! Estilização dos cards */
+    
+        main h1{
+            font-size: 2.2rem;
+            color: var(--brown);
+            margin-bottom: 15px;
+        }
+    
+        .container-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            padding: 10px;
+        }
+    
+        .card {
+            min-width: 150px;
+            max-width: 350px;
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+        }
+    
+        .card h2{
+            color: var(--brown);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+    
+        .card p{
+            color: var(--bege2);
+        }
+    
+        .card span{
+            color: var(--Red);
+            font-weight: 600;
+        }
+    
+        .card  img{
+            width:100%;
+            border-radius: 10px;
+        }
+    
+        .txt-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            gap: 5px;
+            margin-top: 5%;
+        }
+
+    
+        .escolher{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        } 
+        
+        .escolher p{
+            color: var(--white);
+        }
+    
+        .media{
+            border: 1px solid white;
+            color:var(--white);
+            align-items: center;
+            padding: 2px;
+            border-radius: 50%;
+        }
+    
+        .cake{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        /*! estilização item selecionados */
+    
+        .cart{
+            background-color: var(--white);
+            width: 100%;
+            min-height: 25%;
+            border-radius: 13px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+    
+        
+        .cart h1{
+            align-self: self-start;
+            color: var(--Red);
+            font-size: 1.2rem;
+        }
+    
+        .cart p{
+            color: var(--bege2);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+    
+        .item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid var(--bege2);
+            padding: 5px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            user-select: none;
+        }
+    
+        .item img{
+            margin: 0px 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+        }
+    
+        .item i{
+            padding: 20px 8px;
+        }
+    
+        .valor-total{
+            display: none;
+        }
+}
+
+    @media (min-width: 481px) and (max-width: 768px) {
+
+    body{
+        display: flex;
+        background-color: var(--light-grey);
+        margin: 5%;
+    }
+
+    main {
+        flex: 0 0 70%;
+    }
+
+    aside {
+        flex: 0 0 30%;
+        background-color: var(--rose0);
+        margin-left: 20px;
+    }
+
+
+    /*! Estilização dos cards */
+
+    main h1{
+        font-size: 2.2rem;
+        color: var(--brown);
+        margin-bottom: 15px;
+    }
+
+    .container-card {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+        padding: 10px;
+    }
+
+    .card {
+        min-width: 150px;
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .card h2{
+        color: var(--brown);
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+
+    .card p{
+        color: var(--bege2);
+    }
+
+    .card span{
+        color: var(--Red);
+        font-weight: 600;
+    }
+
+    .card  img{
+        width:100%;
+        border-radius: 10px;
+    }
+
+    .txt-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: 5px;
+        margin-top: 13%;
+    }
+
+    .escolher{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    } 
+    
+    .escolher p{
+        color: var(--white);
+    }
+
+    .media{
+        border: 1px solid white;
+        color:var(--white);
+        align-items: center;
+        padding: 2px;
+        border-radius: 50%;
+    }
+
+    .cake{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+ 
+
+    /*! estilização cart vazio
+
+    
+    /*! estilização item selecionados */
+
+    .cart{
+        background-color: var(--white);
+        width: 90%;
+        min-height: 25%;
+        border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    
+    .cart h1{
+        align-self: self-start;
+        color: var(--Red);
+        font-size: 1.2rem;
+    }
+
+    .cart p{
+        color: var(--bege2);
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--bege2);
+        padding: 5px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        user-select: none;
+    }
+
+    .item img{
+        margin: 0px 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    .item i{
+        padding: 20px 8px;
+    }
+
+    .valor-total{
+        display: none;
+    }
+}
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+
+        .txt-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            gap: 5px;
+            margin-top: 5%;
+        }
+
+        button{
+            top: 69%;
+            left: 25%;
+        }
+}
+
